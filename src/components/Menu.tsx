@@ -9,10 +9,10 @@ const Menu = () => {
   const [open, setOpen] = useState(false)
 
   const navLinks = [
-    { title: 'Home', href: '/' },
-    { title: 'Shop', href: '/' },
-    { title: 'About Us', href: '/' },
-    { title: 'Contact', href: '/' },
+    { title: 'Home', href: '/', id: 1 },
+    { title: 'Shop', href: '/', id: 2 },
+    { title: 'About Us', href: '/', id: 3 },
+    { title: 'Contact', href: '/', id: 4 },
 
     //  <Link href="/">Homepage</Link>
     //       <Link href="/">Shop</Link>
@@ -100,7 +100,7 @@ const Menu = () => {
                   return (
                     <div className="overflow-hidden">
                       <MobileNavLink
-                        key={index}
+                        key={link.id}
                         title={link.title}
                         href={link.href}
                       />
